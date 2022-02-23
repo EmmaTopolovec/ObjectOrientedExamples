@@ -12,6 +12,11 @@ public class Animal {
     private boolean eatsMeat;
     private boolean isVertebrate;
 
+    // What does it mean to be a "public" variable?
+    // What does it mean to be a "static" variable?
+    // What is this variable doing?
+    public static int animals = 0;
+
     // What kind of method is this?
     // Is there a return type (i.e. void, int, String, boolean)
     // If there is a return type, what is it?
@@ -21,6 +26,7 @@ public class Animal {
         numLegs = 0;
         eatsMeat = false;
         isVertebrate = false;
+        animals++;
     }
 
     // What does the "this" keyword mean?
@@ -30,6 +36,7 @@ public class Animal {
         this.numLegs = numLegs;
         this.eatsMeat = eatsMeat;
         this.isVertebrate = isVertebrate;
+        animals++;
     }
 
     // Why is this method public? What would happen if it wasn't public?

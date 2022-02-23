@@ -34,7 +34,7 @@ public class Main {
         a.isVertebrate();
         System.out.println(a.toString()); // What is printed?
     
-        
+
 
         Animal b = new Animal("Beverly", 4, true, true);
         System.out.println(b.toString()); // What is printed?
@@ -60,5 +60,10 @@ public class Main {
 
         Friendship f = new Friendship(d, e);
         f.printFriends(); // What is printed?
+
+
+        // Why can you access the "animals" variable without a public getter method?
+        // Could you do a.animals or b.animals ?
+        System.out.println(Animal.animals); // What is printed?
     }
 }
