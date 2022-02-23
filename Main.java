@@ -2,18 +2,20 @@ public class Main {
     // Please read through the files in the following order:
 
     /*
-        1. Speak.java    
-        2. Animal.java
-        3. Mammal.java
-        4. Human.java
-        5. Reptile.java
-        6. Speak.java (again)
-        7. Main.java
+        1. Animal.java
+        2. Mammal.java
+        3. Human.java
+        4. Reptile.java
+        5. Friendship.java
+        6. Main.java
     */
 
     // For each file, make sure to look at the comments and answer all questions
 
-    // Look at the main method AFTER looking at ALL OTHER FILES!
+
+
+
+    // Look at this main method AFTER looking at ALL OTHER FILES!
     public static void main(String[] args) {
 
         /*
@@ -32,8 +34,9 @@ public class Main {
         a.isVertebrate();
         System.out.println(a.toString()); // What is printed?
     
+        
 
-        Animal b = new Animal("Beverly", 4, true, true, new Speak(true, "Ribbit"));
+        Animal b = new Animal("Beverly", 4, true, true);
         System.out.println(b.toString()); // What is printed?
 
 
@@ -51,8 +54,11 @@ public class Main {
         System.out.println();
 
 
-        Reptile e = new Reptile("Larry", 4, true, true, new Speak(false), true, false);
+        Reptile e = new Reptile("Larry", 4, true, true, true, false);
         System.out.println(e.toString()); // What is printed?
 
+
+        Friendship f = new Friendship(d, e);
+        f.printFriends(); // What is printed?
     }
 }

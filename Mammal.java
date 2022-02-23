@@ -12,10 +12,10 @@ public class Mammal extends Animal {
         hasFur = false;
     }
 
-    Mammal(String name, int numLegs, boolean eatsMeat, boolean isVertebrate, Speak noise, boolean hasHair, boolean hasFur) {
+    Mammal(String name, int numLegs, boolean eatsMeat, boolean isVertebrate, boolean hasHair, boolean hasFur) {
 
         // What does this do? What class is "super"?
-        super(name, numLegs, eatsMeat, isVertebrate, noise);
+        super(name, numLegs, eatsMeat, isVertebrate);
 
         this.hasHair = hasHair;
         this.hasFur = hasFur;

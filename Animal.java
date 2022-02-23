@@ -11,7 +11,6 @@ public class Animal {
     private int numLegs;
     private boolean eatsMeat;
     private boolean isVertebrate;
-    private Speak noise;
 
     // What kind of method is this?
     // Is there a return type (i.e. void, int, String, boolean)
@@ -22,17 +21,15 @@ public class Animal {
         numLegs = 0;
         eatsMeat = false;
         isVertebrate = false;
-        noise = new Speak(false, "");
     }
 
     // What does the "this" keyword mean?
     // Does it matter that the parameters of this method have the same names as our data members?
-    Animal(String name, int numLegs, boolean eatsMeat, boolean isVertebrate, Speak noise) {
+    Animal(String name, int numLegs, boolean eatsMeat, boolean isVertebrate) {
         this.name = name;
         this.numLegs = numLegs;
         this.eatsMeat = eatsMeat;
         this.isVertebrate = isVertebrate;
-        this.noise = noise;
     }
 
     // Why is this method public? What would happen if it wasn't public?
@@ -62,13 +59,6 @@ public class Animal {
     }
     public void isVertebrate(boolean newBool) {
         isVertebrate = newBool;
-    }
-
-    public Speak getNoise() {
-        return noise;
-    }
-    public void setNoise(Speak newNoise) {
-        noise = newNoise;
     }
 
     // While it may be useful to create accessor (getter) and mutator (setter) methods
@@ -101,20 +91,12 @@ public class Animal {
             out += "Doesn't have a spine.\n";
         }
 
-        if (noise.makesNoise()) {
-            out += "Makes noise.\n";
-            out += "Example noise: " + noise.exampleNoise() + "!\n";
-        }
-         else {
-            out += "Makes no sound.\n";
-         }
-
         return out;
     }
 
     // What would be printed if the following code was run in Main.java?
 
-    // Animal a = new Animal( "Beverly", 4, true, true, new Speak(true, "Ribbit") );
+    // Animal a = new Animal( "Beverly", 4, true, true );
     // System.out.println( a.toString() );
 
 }
